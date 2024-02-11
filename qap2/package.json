@@ -1,0 +1,11 @@
+{
+  "name": "qap2",
+  "version": "1.0.0",
+  "description": "Scott's QAP2 for Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Scott Normore",
+  "license": "ISC"
+}
