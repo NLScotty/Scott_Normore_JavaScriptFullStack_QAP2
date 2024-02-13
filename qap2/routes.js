@@ -32,9 +32,21 @@ function fetchStyle(fileName, response) {
     });
 };
 
+// Fucntion added to fetch the favicon Icon for the website.
+function fetchIcon(fileName, response) {
+    fs.readFile(fileName, (error, content) => {
+      if(error) {
+        response.writeHead(500, { 'Content-Type': 'text/plain' });
+        response.end('500 Internal Server Error');
+      } else {
+        response.writeHead(200, { 'Content-Type': 'image/x-icon' });
+        response.end(content, 'utf-8');
+      }
+    });
+};
+
 module.exports = {
-  //aboutPage,
   fetchHTMLPage,
   styleSheet,
-  //homePage,
+  fetchIcon,
 }
